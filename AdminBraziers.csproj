@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>AdminBraziers</AssemblyName>
+    <RootNamespace>AdminBraziers</RootNamespace>
+    <Version>1.0.0</Version>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <VintageStoryPath Condition="'$(VINTAGE_STORY)' != ''">$(VINTAGE_STORY)</VintageStoryPath>
+  </PropertyGroup>
+
+  <Target Name="ValidateVintageStoryPath" BeforeTargets="ResolveReferences">
+    <Error Condition="'$(VintageStoryPath)' == ''"
+           Text="Set the VINTAGE_STORY environment variable or pass /p:VintageStoryPath=... pointing to the Vintage Story installation." />
+    <Error Condition="!Exists('$(VintageStoryPath)\VintagestoryAPI.dll')"
+           Text="VintageStoryPath '$(VintageStoryPath)' does not contain VintagestoryAPI.dll." />
+  </Target>
+
+  <ItemGroup>
+    <Reference Include="VintagestoryAPI">
+      <HintPath>$(VintageStoryPath)\VintagestoryAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="modinfo.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="modicon.png" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="adminbraziers.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="assets\**\*.*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

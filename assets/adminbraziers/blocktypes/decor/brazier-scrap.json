@@ -1,0 +1,87 @@
+{
+	code: "brazier-scrap",
+	behaviors: [{name: "UnstableFalling", properties: { attachmentArea: { x1: 5, y1: 0, z1: 5, x2: 10, y2: 0, z2: 10 } }}, {name: "HeatSource", properties: { heatStrength: 6 } }],
+	shape: { base: "adminbraziers:block/decor/brazier" },
+	textures: {
+		"iron": { base: "game:block/metal/tarnished/rusty-iron" }
+	},
+	creativeinventory: { "general": ["*"], "decorative": ["*"], "DR": ["*"] },
+	blockmaterial: "Metal",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 0,
+	lightHsv: [4, 4, 17],
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	collisionbox: {
+		x1: 0.3125, y1: 0, z1: 0.3125,
+		x2: 0.6875, y2: 0.4375, z2: 0.6875
+	},
+	selectionbox: {
+		x1: 0.3125, y1: 0, z1: 0.3125,
+		x2: 0.6875, y2: 0.4375, z2: 0.6875
+	},
+	tpHandTransform: {
+		translation: { x: -1.5, y: -0.9, z: -1 },
+		rotation: { x: -78, y: 32, z: -95 },
+		scale: 0.45
+	},
+	guiTransform: {
+		origin: { x: 0.5, y: 0.3, z: 0.5 },
+		scale: 2.5
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0, y: 0, z: 0 },
+		scale: 4
+	},
+
+	particleProperties: [
+		{
+			"__comment": "Ember cubicles",
+			hsvaColor: [{ avg: 20, var: 20 }, { avg: 255, var: 50 }, { avg: 255, var: 50 },  { avg: 255, var: 0 }],
+			gravityEffect: { dist: "invexp", avg: -0.07, var: 0.4 },
+			posOffset: [ { avg: 0, var: 0.1 }, { avg: -0.2, var: 0 }, { avg: 0, var: 0.1 }],
+			velocity: [ { avg: 0, var: 0.15 }, { avg: 0.5, var: 0.1 }, { avg: 0, var: 0.15 }],
+			quantity: { avg: 0.03 },
+			size: { avg: 0.4, var: 0 },
+			sizeEvolve: { transform: "quadratic", factor: -0.7 },
+			lifeLength: { avg: 1.5 },
+			vertexFlags: 128,
+			windAffectednes: 0.05
+		},
+		{
+			"__comment": "Smoke quads",
+			hsvaColor: [{ avg: 0, var: 0 }, { avg: 0, var: 0 }, { avg: 40, var: 30 },  { avg: 220, var: 50 }],
+			opacityEvolve: { transform: "quadratic", factor: -16 },
+			gravityEffect: { avg: 0, var: 0 },
+			posOffset: [ { avg: 0, var: 0.1 }, { avg: -0.23, var: 0 }, { avg: -0.09, var: 0.1 }],
+			velocity: [ { avg: 0, var: 0.025 }, { avg: 0.15, var: 0.1 }, { avg: 0, var: 0.025 }],
+			quantity: { avg: 0.05 },
+			size: { avg: 0.25, var: 0.05 },
+			sizeEvolve: { transform: "linear", factor: 0.5 },
+			particleModel: "Quad",
+			windAffectednes: 0.2
+		},
+		{
+			"__comment": "Fire quads",
+			hsvaColor: [{ avg: 20, var: 20 }, { avg: 255, var: 50 }, { avg: 255, var: 50 },  { avg: 255, var: 0 }],
+			opacityEvolve: { transform: "quadratic", factor: -16 },
+			gravityEffect: { avg: 0, var: 0 },
+			posOffset: [ { avg: 0, var: 0.12 }, { avg: -0.2, var: 0 }, { avg: 0, var: 0.12 }],
+			velocity: [ { avg: 0, var: 0.025 }, { avg: 0.18, var: 0.07 }, { avg: 0, var: 0.025 }],
+			quantity: { avg: 0.6 },
+			size: { avg: 0.25, var: 0.05 },
+			lifeLength: { avg: 0.5 },
+			sizeEvolve: { transform: "linear", factor: 0.5 },
+			particleModel: "Quad",
+			vertexFlags: 128,
+			windAffectednes: 0.1
+		}
+	]
+}

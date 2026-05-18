@@ -1,0 +1,90 @@
+{
+	code: "firecage",
+	variantgroups: [
+		{ code: "type", states: ["copper", "blackbronze", "meteoriciron", "iron", "steel"] }
+	],
+	behaviors: [{name: "UnstableFalling", properties: { attachmentArea: { x1: 2, y1: 0, z1: 2, x2: 14, y2: 0, z2: 14 } }}, {name: "HeatSource", properties: { heatStrength: 10 } }],
+	shape: { base: "adminbraziers:block/decor/firecage" },
+	textures: {
+		"metal": { base: "adminbraziers:block/metal/{type}-burned" }
+	},
+	creativeinventory: { "general": ["*"], "decorative": ["*"], "DR": ["*"] },
+	blockmaterial: "Metal",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 0,
+	lightHsv: [4, 4, 20],
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	collisionbox: {
+		x1: 0.125, y1: 0, z1: 0.125,
+		x2: 0.875, y2: 0.875, z2: 0.875
+	},
+	selectionbox: {
+		x1: 0.125, y1: 0, z1: 0.125,
+		x2: 0.875, y2: 0.875, z2: 0.875
+	},
+	tpHandTransform: {
+		translation: { x: -1.0, y: -0.9, z: -1 },
+		rotation: { x: -90, y: 32, z: -90 },
+		scale: 0.45
+	},
+	guiTransform: {
+		origin: { x: 0.5, y: 0.3, z: 0.5 },
+		scale: 1.1
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0, y: 0, z: 0 },
+		scale: 4
+	},
+	heldTpIdleAnimation: "holdbothhandslarge", heldTpUseAnimation: "twohandplaceblock",
+	particleProperties: [
+		{
+			"__comment": "Ember cubicles",
+			hsvaColor: [{ avg: 20, var: 20 }, { avg: 255, var: 50 }, { avg: 255, var: 50 },  { avg: 255, var: 0 }],
+			gravityEffect: { dist: "invexp", avg: -0.07, var: 0.4 },
+			posOffset: [ { avg: 0, var: 0.3 }, { avg: -0.4, var: 0.05 }, { avg: 0, var: 0.3 }],
+			velocity: [ { avg: 0, var: 0.15 }, { avg: 0.5, var: 0.1 }, { avg: 0, var: 0.15 }],
+			quantity: { avg: 0.04 },
+			size: { avg: 0.3, var: 0.1 },
+			sizeEvolve: { transform: "quadratic", factor: -0.7 },
+			lifeLength: { avg: 2.5 },
+			vertexFlags: 128,
+			windAffectednes: 0.05
+		},
+		{
+			"__comment": "Smoke quads",
+			hsvaColor: [{ avg: 0, var: 0 }, { avg: 0, var: 0 }, { avg: 40, var: 30 },  { avg: 220, var: 50 }],
+			opacityEvolve: { transform: "quadratic", factor: -16 },
+			gravityEffect: { avg: 0, var: 0 },
+			posOffset: [ { avg: 0, var: 0.1 }, { avg: -0.5, var: 0 }, { avg: -0.09, var: 0.1 }],
+			velocity: [ { avg: 0, var: 0.025 }, { avg: 0.15, var: 0.1 }, { avg: 0, var: 0.025 }],
+			quantity: { avg: 0.05 },
+			size: { avg: 0.25, var: 0.05 },
+			sizeEvolve: { transform: "linear", factor: 0.4 },
+			particleModel: "Quad",
+			windAffectednes: 0.2
+		},
+		{
+			"__comment": "Fire quads",
+			hsvaColor: [{ avg: 20, var: 20 }, { avg: 255, var: 50 }, { avg: 255, var: 50 },  { avg: 255, var: 0 }],
+			opacityEvolve: { transform: "quadratic", factor: -10 },
+			gravityEffect: { avg: 0, var: 0 },
+			posOffset: [ { avg: 0, var: 0.3 }, { avg: -0.4, var: 0 }, { avg: 0, var: 0.3 }],
+			velocity: [ { avg: 0, var: 0.025 }, { avg: 0.18, var: 0.07 }, { avg: 0, var: 0.025 }],
+			quantity: { avg: 0.6 },
+			size: { avg: 0.3, var: 0.12 },
+			lifeLength: { avg: 1 },
+			sizeEvolve: { transform: "linear", factor: 0.35 },
+			particleModel: "Quad",
+			vertexFlags: 128,
+			windAffectednes: 0.1
+		}
+	]
+}

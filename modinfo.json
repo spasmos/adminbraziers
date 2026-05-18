@@ -1,0 +1,15 @@
+{
+  "type": "code",
+  "modid": "adminbraziers",
+  "name": "AdminBraziers",
+  "description": "Admin-focused metal braziers and fire cages for server-managed areas.",
+  "version": "1.0.0",
+  "side": "Universal",
+  "requiredOnClient": true,
+  "requiredOnServer": true,
+  "authors": [ "spasmos" ],
+  "contributors": [ "Digitalr (Just_a_cat)", "DazPrinzip" ],
+  "dependencies": {
+    "game": "1.22.0"
+  }
+}

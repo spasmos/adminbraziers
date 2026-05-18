@@ -1,0 +1,15 @@
+{
+    "block-brazier-scrap": "Маленькая жаровня из хлама",
+    "block-brazier-copper": "Маленькая медная жаровня",
+    "block-brazier-blackbronze": "Маленькая жаровня из черной бронзы",
+    "block-brazier-iron": "Маленькая железная жаровня",
+    "block-brazier-meteoriciron": "Маленькая жаровня из метеоритного железа",
+    "block-brazier-steel": "Маленькая стальная жаровня",
+    "block-firecage-scrap": "Большая жаровня из хлама",
+    "block-firecage-copper": "Большая медная жаровня",
+    "block-firecage-blackbronze": "Большая жаровня из черной бронзы",
+    "block-firecage-iron": "Большая железная жаровня",
+    "block-firecage-meteoriciron": "Большая жаровня из метеоритного железа",
+    "block-firecage-steel": "Большая стальная жаровня",
+	"game:tabname-DR": "DR",
+}

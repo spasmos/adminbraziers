@@ -1,0 +1,15 @@
+{
+    "block-brazier-scrap": "Kleine Feuerstelle aus Schrott",
+    "block-brazier-copper": "Kleine Feuerstelle aus Kupfer",
+    "block-brazier-blackbronze": "Kleine Feuerstelle aus Schwarzbronze",
+    "block-brazier-iron": "Kleine Feuerstelle aus Eisen",
+    "block-brazier-meteoriciron": "Kleine Feuerstelle aus Meteoreisen",
+    "block-brazier-steel": "Kleine Feuerstelle aus Stahl",
+    "block-firecage-scrap": "Zum Dorfkrug Feuerstelle aus Schrott",
+    "block-firecage-copper": "Zum Dorfkrug Feuerstelle aus Kupfer",
+    "block-firecage-blackbronze": "Zum Dorfkrug Feuerstelle aus Schwarzbronze",
+    "block-firecage-iron": "Zum Dorfkrug Feuerstelle aus Eisen",
+    "block-firecage-meteoriciron": "Zum Dorfkrug Feuerstelle aus Meteoreisen",
+    "block-firecage-steel": "Zum Dorfkrug Feuerstelle aus Stahl",
+	"game:tabname-DR": "ZD",
+}

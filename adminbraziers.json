@@ -1,0 +1,7 @@
+{
+  "adminMode": true,
+  "removeCraftingRecipesWhenAdminModeEnabled": true,
+  "adminPrivileges": [
+    "root"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+    "block-brazier-scrap": "Small scrapmetal brazier",
+    "block-brazier-copper": "Small copper brazier",
+    "block-brazier-blackbronze": "Small black bronze brazier",
+    "block-brazier-iron": "Small iron brazier",
+    "block-brazier-meteoriciron": "Small meteoric iron brazier",
+    "block-brazier-steel": "Small steel brazier",
+    "block-firecage-scrap": "Big scrapmetal brazier",
+    "block-firecage-copper": "Big copper brazier",
+    "block-firecage-blackbronze": "Big black bronze brazier",
+    "block-firecage-iron": "Big iron brazier",
+    "block-firecage-meteoriciron": "Big meteoric iron brazier",
+    "block-firecage-steel": "Big steel brazier",
+	"game:tabname-DR": "DR",
+}
