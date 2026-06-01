@@ -59,9 +59,7 @@ dotnet build .\AdminBraziers.csproj -c Release
 
 ## Compatibility
 
-- Vintage Story `1.22.0`
-- Vintage Story `1.22.1`
-- Vintage Story `1.22.2`
+- Vintage Story `1.22.x`
 
 ## Credits
 
